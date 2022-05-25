@@ -69,7 +69,7 @@
             this.physics.world.bounds.height/2,
             'player1'
         );
-        player1.setScale(.5);
+        player1.setScale(.6);
         player1.setImmovable(true);
         player1.setCollideWorldBounds(true);
         
@@ -102,8 +102,8 @@
     function update ()
     {
     if (!isGameStarted){
-        var initialVelocityX= (Math.random() * 100)+100;
-        var initialVelocityY= (Math.random() * 100)+100;
+        var initialVelocityX= (Math.random() * 300)+300;
+        var initialVelocityY= (Math.random() * 300)+300;
         ball.setVelocityX(initialVelocityX);
         ball.setVelocityY(initialVelocityY);
         isGameStarted = true;
@@ -115,7 +115,7 @@
         console.log('Player 1 wins');
         
     }
-    if(ball.body.x<ball.body.width/2-100){
+    if(ball.body.x<ball.body.width/2+16){
         console.log('Player 2 wins');
     }
     //Player 1 move
